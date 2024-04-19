@@ -1,0 +1,28 @@
+{%extends 'base.html'%}
+
+{%block title%}Cultivar - Home{%endblock%}
+
+{%block content%}
+
+<div class="container">
+    <h3>Nuestros Productos</h3>
+    <div class="conteiner my-3 mx-3">
+        <ul class="list-unstyled d-flex">
+            {% for product in products %}
+            <li>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">{{product.title}}</h5>
+                      <p class="card-text">{{product.description}}</p>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Precio: ${{product.price}}26.80</li>
+                        <a href="#" class="card-link my-2">Comprar Producto</a>
+                    </div>
+                </div>
+            </li>
+            {%endfor%}
+        </ul>
+    </div>
+</div>
+
+{%endblock%}
